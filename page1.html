@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Ma page</title>
+		<script>
+			function essaie(t){
+				alert(t);
+			}
+			function changecouleur(i){
+				document.getElementById(i).style.color="red";
+			}
+			function ecrire(t){
+				document.getElementById('texte_a_lire').value=t;
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exemple 01 </h1>
+		<P id="paragraph" onclick="changecouleur('paragraph')">
+			Coucou.
+		</p>
+		<input id="texte_a_lire" value="bof" name="texte">
+ 		
+		<p class="essai" id="para2">
+			ligne 1
+		</p>
+		<div class="essai" id="div1">
+			<button onclick="essaie(document.getElementById('texte_a_lire').value)">
+				un bouton 
+			</button>
+			ligne 2<br>
+			<button onclick="ecrire('Super')">
+				Ecrire
+			</button>
+		</div>
+	</body>
+</html>
